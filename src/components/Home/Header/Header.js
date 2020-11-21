@@ -62,7 +62,7 @@ const Header = () => {
             variant="contained"
             color="primary"
           >
-            Sign Up
+            Sign up free
           </Button>
         </Toolbar>
       </AppBar>

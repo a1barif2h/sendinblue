@@ -4,7 +4,7 @@ import banner from "../../../images/banner.png";
 
 const Banner = () => {
   return (
-    <Container style={{ paddingTop: "50px" }}>
+    <Container style={{ paddingTop: "120px" }}>
       <Grid container>
         <Grid item xs={12} sm={12} md={6} lg={6}>
           <h1 style={{ fontSize: "72px", color: "#091E3F" }}>

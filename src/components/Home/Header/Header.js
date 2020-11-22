@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Container } from "@material-ui/core";
 import HeaderMenu from "./HeaderMenu";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,9 +37,10 @@ const Header = () => {
         style={{
           backgroundColor: "#fff",
           color: "#091E3F",
-          boxShadow: "0 0 0 0 #fff",
+          padding: "25px 0",
+          boxShadow: "5px 5px 10px #ddd",
         }}
-        position="static"
+        position="fixed"
       >
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
@@ -51,19 +53,24 @@ const Header = () => {
           <Typography className={classes.menuLink}>
             <HeaderMenu />
           </Typography>
-          <Button
-            style={{ marginRight: "auto", fontWeight: "bold" }}
-            color="inherit"
-          >
-            Login
-          </Button>
-          <Button
-            style={{ padding: "15px", borderRadius: "25px" }}
-            variant="contained"
-            color="primary"
-          >
-            Sign up free
-          </Button>
+
+          <Link style={{ textDecoration: "none" }} to="/login">
+            <Button
+              style={{ marginRight: "auto", fontWeight: "bold" }}
+              color="inherit"
+            >
+              Login
+            </Button>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/login">
+            <Button
+              style={{ padding: "15px", borderRadius: "25px" }}
+              variant="contained"
+              color="primary"
+            >
+              Sign up free
+            </Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </Container>
